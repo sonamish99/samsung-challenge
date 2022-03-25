@@ -4,46 +4,11 @@
 
 replicaCount: 1
 
-livenessProbe:
-    # -- Enable the liveness probe
-    enabled: true
-    # -- The liveness probe initial delay seconds
-    initialDelaySeconds: 30
-    # -- The liveness probe period seconds
-    periodSeconds: 30
-    # -- The liveness probe timeout seconds
-    timeoutSeconds: 1
-    # -- The liveness probe failure threshold
-    failureThreshold: 3
-    # -- The liveness probe success threshold
-    successThreshold: 1
-    httpGet:
-            path: /
-            port: 5000
-            scheme: HTTP
-  readinessProbe:
-    # -- Enable the readiness probe
-    enabled: true
-    # -- The readiness probe initial delay seconds
-    initialDelaySeconds: 30
-    # -- The readiness probe period seconds
-    periodSeconds: 30
-    # -- The readiness probe timeout seconds
-    timeoutSeconds: 1
-    # -- The readiness probe failure threshold
-    failureThreshold: 3
-    # -- The readiness probe success threshold
-    successThreshold: 1
-    httpGet:
-            path: /
-            port: 5000
-            scheme: HTTP
-
 image:
   repository: sonaliswatika/samsung-challenge
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "nodejs-web-app"
+  tag: "nodejs-app-samsung"
 
 imagePullSecrets: []
 nameOverride: ""
